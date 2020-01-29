@@ -12,7 +12,7 @@ we implemented our own LSTM variant of DKT. This repository contains our impleme
 
 # Requirements
  - Python
- - Theano
+ - TensorFlow or Theano
  - Keras
  - numpy
  - scikit-learn
@@ -34,6 +34,13 @@ indicates that students 0, 1, 3 and 4 should be the training set and the rest wi
 
 ```sh
 python dkt.py [-h] --dataset DATASET --splitfile SPLITFILE
+              [--hiddenunits HIDDENUNITS] [--batchsize BATCHSIZE]
+              [--timewindow TIMEWINDOW] [--epochs EPOCHS]
+```
+
+for python 3:
+```sh
+python dkt_new.py [-h] --dataset DATASET --splitfile SPLITFILE
               [--hiddenunits HIDDENUNITS] [--batchsize BATCHSIZE]
               [--timewindow TIMEWINDOW] [--epochs EPOCHS]
 ```
