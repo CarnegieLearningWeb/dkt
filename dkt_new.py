@@ -44,9 +44,9 @@ def main():
     time_window = args.timewindow
     epochs = args.epochs
 
-    model_file = dataset + '.model_weights'
-    history_file = dataset + '.history'
-    preds_file = dataset + '.preds'
+    model_file = "./model/" + dataset.replace('./data/', '') + '.model_weights'
+    history_file = "./model/" + dataset.replace('./data/', '') + '.history'
+    preds_file = "./model/" + dataset.replace('./data/', '') + '.preds'
 
     overall_loss = [0.0]
     preds = []
