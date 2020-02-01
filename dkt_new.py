@@ -29,8 +29,8 @@ import os
 
 def main():
     parser = argparse.ArgumentParser(description='Process some integers.')
-    parser.add_argument('--dataset', '-d', type=str, help='Dataset file', required=True)
-    parser.add_argument('--splitfile', '-s', type=str, help='Split file', required=True)
+    parser.add_argument('--dataset', '-d', type=str, help='Dataset file', default='./assistments.txt')
+    parser.add_argument('--splitfile', '-s', type=str, help='Split file', default='./assistments_split.txt')
     parser.add_argument('--hiddenunits', '-u', type=int, help='Number of LSTM hidden units.', default=200, required=False)
     parser.add_argument('--batchsize', '-b', type=int, help='Number of sequences to process in a batch.', default=5, required=False)
     parser.add_argument('--timewindow', '-t', type=int, help='Number of timesteps to process in a batch.', default=100, required=False)
@@ -125,7 +125,7 @@ def main():
 
     # similiar to the above
     def finished_batch(percent_done):
-        print("(%4.3f %%) %f" % (percent_done, overall_loss[0]))
+        # print("(%4.3f %%) %f" % (percent_done, overall_loss[0]))
         model.reset_states()
 
     # run the model

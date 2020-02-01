@@ -129,7 +129,7 @@ def main():
         
     # similiar to the above
     def finished_batch(percent_done):
-        print "(%4.3f %%) %f" % (percent_done, overall_loss[0])
+        # print "(%4.3f %%) %f" % (percent_done, overall_loss[0])
         model.reset_states()
         
     # run the model
